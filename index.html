@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junearbie | BSIT 1B Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <a class="logo" href="#home">J<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a class="contact-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-text">
+        <p class="eyebrow">WELCOME TO MY PERSONAL PORTFOLIO</p>
+        <h1>Hello, I'm <span>Junearbie!</span></h1>
+        <h2>BSIT 1B Student</h2>
+        <p>I am an Information Technology student who is interested in computers, programming, and web development. I enjoy learning new skills and exploring technology.</p>
+        <a class="button" href="#about">Discover More</a>
+      </div>
+
+      <div class="profile-wrap">
+        <!-- This is the only image used on the entire website. Replace its URL with your own photo URL. -->
+        <img class="profile-image"
+          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85"
+          alt="Profile portrait">
+      </div>
+    </section>
+
+    <section class="section soft" id="about">
+      <div class="container narrow">
+        <p class="eyebrow">GET TO KNOW ME</p>
+        <h2 class="section-title">About <span>Me</span></h2>
+        <p>I am a Bachelor of Science in Information Technology student from BSIT 1B. I am interested in learning how websites and computer systems work. I want to improve my knowledge in programming and technology.</p>
+        <p>My goal is to become a skilled and responsible IT professional. I believe that practice, creativity, and continuous learning will help me achieve my dreams.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="skills">
+      <p class="eyebrow">WHAT I AM LEARNING</p>
+      <h2 class="section-title">My <span>Skills</span></h2>
+      <div class="grid four">
+        <article class="card"><div class="icon">⌘</div><h3>HTML</h3><p>Creating the structure of web pages.</p></article>
+        <article class="card"><div class="icon">✧</div><h3>CSS</h3><p>Designing and styling websites.</p></article>
+        <article class="card"><div class="icon">▣</div><h3>Computer Skills</h3><p>Using computers and basic applications.</p></article>
+        <article class="card"><div class="icon">◎</div><h3>Communication</h3><p>Sharing ideas and working with others.</p></article>
+      </div>
+    </section>
+
+    <section class="section soft" id="projects">
+      <div class="container">
+        <p class="eyebrow">MY SCHOOL WORK</p>
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <div class="grid three">
+          <article class="card project"><p class="tag">WEB DEVELOPMENT</p><h3>Personal Portfolio</h3><p>A personal website created using HTML and CSS to introduce myself and showcase my skills.</p></article>
+          <article class="card project"><p class="tag">HTML ACTIVITY</p><h3>HTML Practice</h3><p>A class activity that helps me understand HTML elements and website structure.</p></article>
+          <article class="card project"><p class="tag">IT LEARNING</p><h3>Computer Activities</h3><p>School activities that help me improve my computer knowledge and problem-solving skills.</p></article>
+        </div>
+        <p class="note">Update these sample entries with projects you have actually completed.</p>
+      </div>
+    </section>
+
+    <section class="section container narrow" id="contact">
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h2 class="section-title">Contact <span>Me</span></h2>
+      <p>Thank you for visiting my portfolio. Feel free to contact me using the details below.</p>
+      <div class="contact-box">
+        <p><strong>Email:</strong> <a href="mailto:yourname@email.com">yourname@email.com</a></p>
+        <p><strong>Course:</strong> BSIT 1B</p>
+        <p><strong>Location:</strong> Philippines</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Junearbie | BSIT 1B</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const opened = navLinks.classList.toggle("show");
+      menuToggle.setAttribute("aria-expanded", opened);
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
